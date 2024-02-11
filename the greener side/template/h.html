@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <!-- <link rel="stylesheet" href="{{url_for('static',filename='project.css')}}"> -->
+  <link rel="stylesheet" href="h.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Vollkorn+SC:wght@400;600;700;900&display=swap" rel="stylesheet">
+  <title>Cafe Management system</title>
+
+</head>
+
+<body>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+  <header>
+    <div class="bg">
+
+      <nav class="navbar fixed-top">
+        <a class="navbar-brand" href="#">
+          <img src="/static/logoo.png" alt="logo"
+            style="height: 50px; width: 70px; padding-left: 20px; padding-top: 5px;"></a>
+
+
+        <ul class="nav">
+          <div class="heading" style="padding-right:350px; font-size: 20px; font-weight: bold; color: white;">Cafe
+            Management System</div>
+          <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="#aboutus" target="_self" class="nav-link">About us</a></li>
+          <li class="nav-item"><a href="/menu" target="_blank" class="nav-link">Menu</a></li>
+
+          <li class="nav-item"><a href="#contactus" class="nav-link">Contact Us</a></li>
+          
+          <li class="nav-item">
+            <div class="dropdown" style="margin-right: 20px;">
+              <button type="button" class="user-icon" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="fa-regular fa-user"></i>
+              </button>
+              <ul class="dropdown-menu dropdown-menu-end" style="background-color:#132a13;">
+                <li><a class="dropdown-item" href="/l" style=" font-size: 16px;">Login</a></li>
+                <li><a class="dropdown-item" href="/s" style=" font-size: 16px;">Signup</a></li>
+                <li><a class="dropdown-item" href="/" style="font-size: 16px; ">Logout</a></li>
+              </ul>
+            </div>
+
+          </li>
+    </div>
+
+    </ul>
+
+    </nav>
+  </header>
+  <div class="cornerimgs">
+    <!-- <img src="/static/food1.jpeg" alt="Left Corner Image" class="left-corner-img"> -->
+    <img src="/static/homebg.jpg" id="homebg">
+
+    <section class="content-between-images">
+
+      <h1 style="font-size: 30px;">Welcome to The Greener Side!</h1><!--<hr class="line">-->
+      <br>
+      <h5>"Explore our cafe, where every sip and bite takes you on a tasty adventure.<br>
+        From flavorful burgers to cheesy delights, <br>
+        we offer a dining experience that goes above and beyond the usual cafe fare."
+      </h5>
+      <h2><button type="button" class="ordernow"><a href="/menu" target="_blank"
+            style="color:black; text-decoration: none; font-size: 25px;">Order Now</a></button></h2>
+    </section>
+    <!-- <img src="/static/food4.jpeg" alt="Right Corner Image" class="right-corner-img"> -->
+  </div>
+
+
+  </div>
+  </div>
+
+
+  <div class="about">
+    <div class="aboutbg">
+      <div class="overlay">
+        <div id="aboutus">
+          <h1>About Us.</h1>
+          <p>Our cafe is dedicated to serving top-quality food and beverages while prioritizing eco-conscious practices
+            throughout our operations<br>
+            With a focus on sustainability, we source organic ingredients and implement eco-friendly practices to
+            minimize our environmental impact.<br>
+            Our team is committed to providing exceptional service, <br>
+            In a warm and inviting atmosphere, making us the ideal choice for meetings, networking, and corporate
+            gatherings.<br>
+            Join us in supporting a greener future while enjoying delicious offerings and fostering meaningful
+            connections.</p>
+          <div class="aboutimg">
+            <img src="/static/food6.jpeg" alt="foodimg">
+            <img src="/static/food7.jpeg" alt="foodimg">
+            <img src="/static/food8.jpg" alt="foodimg">
+            <img src="/static/food10.jpg" alt="foodimg">
+            <img src="/static/food12.jpg" alt="foodimg">
+            <img src="/static/food11.jpg" alt="foodimg">
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="contact">
+    <div class="contactbg">
+      <div id="contactus">
+        <footer class="footer">
+
+
+          <div class="footer-content">
+
+            <h4>SERVICES</h4>
+            <ul style="list-style-type:square;">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            </ul>
+          </div>
+
+          <div class="footer-content">
+
+            <h4>CONTACT US</h4>
+            <ul style="list-style-type:square;">
+            <li><a href="tel:+919027158355" style="text-decoration: none;">Call now</a>
+            </li>
+            <li><a style="text-decoration: none;" href="mailto:ds2865854@gmail.com">thegreenerside@gmail.com</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-content">
+
+            <h4>SOCIAL MEDIA</h4>
+            <ul style="list-style-type:square;">
+            <div class="icons">
+              <li><a href="https://www.instagram.com/the_greener_side_paschimpuri?igsh=MWJ3dTVnNnFtM2s1Zw=="><i class="fa-brands fa-square-instagram"></i></a></li>
+</div>
+
+          <div class="footer-content">
+
+            </div>
+            </div>
+          </div>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+
+  </div>
+        </footer>
+
+        <!---------------Footer ------------->
+        
+</body>
+
+</html>

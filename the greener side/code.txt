@@ -1,0 +1,139 @@
+
+
+
+
+
+    # from flask import Flask,flash, request,redirect, render_template,url_for
+# import mysql.connector
+
+# app = Flask(__name__,template_folder='template')
+
+# conn = mysql.connector.connect(
+#     host='localhost',
+#     user='root',
+#     password='Sruthi@123#',
+#     database='sruthi'
+# )
+
+# @app.route('/')
+
+# # def login():
+# #     return render_template('login.html')
+
+
+# def signup():
+#     if request.method == 'post':
+#            flash('Your account has been created successfully!', 'success')
+#            return redirect(url_for('home.html'))
+           
+#     return render_template('signup.html')
+
+# @app.route('/submit', methods=["POST"])  # Use "POST" instead of "post"
+# def submit():
+#     firstname = request.form['firstname']
+#     lastname = request.form['lastname']
+#     email = request.form['email']
+#     password = request.form['password']
+
+#     # Store data in the database
+#     cursor = conn.cursor()
+#     sql = "INSERT INTO customer (firstname, lastname, email, password) VALUES (%s, %s, %s, %s)"
+#     val = (firstname, lastname, email, password) 
+#     cursor.execute(sql, val)
+#     conn.commit()
+#     cursor.close()
+
+#     return render_template('home.html')
+
+# if (__name__) == '__main__':
+#     app.run(debug=True)
+
+
+
+from flask import Flask, flash, request, redirect, render_template, url_for, session
+import mysql.connector
+
+app = Flask(__name__, template_folder='template')
+app.secret_key = 'your_secret_key'  # Add a secret key for session management
+
+conn = mysql.connector.connect(
+    host='localhost',
+    user='root',
+    password='Sruthi@123#',
+    database='sruthi'
+)
+
+@app.route('/')
+def signup():
+    return render_template('signup.html')
+
+@app.route('/submit', methods=["POST"])
+def submit():
+    firstname = request.form['firstname']
+    lastname = request.form['lastname']
+    email = request.form['email']
+    password = request.form['password']
+
+    # Store data in the database
+    cursor = conn.cursor()
+    sql = "INSERT INTO customer (firstname, lastname, email, password) VALUES (%s, %s, %s, %s)"
+    val = (firstname, lastname, email, password) 
+    cursor.execute(sql, val)
+    conn.commit()
+    cursor.close()
+    return render_template('home.html')
+
+if __name__ == '__main__':
+    app.run(debug=True)
+
+    
+# # Route for the login page
+# @app.route('/login', methods=['GET', 'POST'])
+# def login():
+#     if request.method == 'POST':
+#         email = request.form['email']
+#         password = request.form['password']
+
+#         # Authenticate the user
+#         if authenticate_user(email, password):
+#             # Authentication successful
+#             session['email'] = email
+#             return redirect('/home.html')  # Redirect to the dashboard or any other page
+#         else:
+#             # Authentication failed
+#             return render_template('login.html', message='Invalid username or password')
+
+#     return render_template('login.html', message='')
+
+# # cursor = conn.cursor()
+
+# # Function to authenticate user
+# def authenticate_user(email, password):
+
+#     # Connect to the database
+#     var = mysql.connector.connect(**conn)
+#     cursor = var.cursor()
+
+#     # Query the database
+#     query = "SELECT * FROM signup WHERE email = %s AND password = %s"
+#     cursor.execute(query, (email, password))
+
+#     # Fetch the result
+#     result = cursor.fetchone()
+
+#     # Close the database connection
+#     cursor.close()
+#     conn.close()
+
+#     return result is not None
+
+# @app.route('/home')
+# def home():
+#     # Your home page logic here
+#     return render_template(url_for('home.html'))
+
+
+
+
+
+
